@@ -1,0 +1,2 @@
+REM 创建eclipse工程
+gradle eclipse

@@ -1,2 +1,4 @@
 # loserStarJ2seLeaning
-# J2SE基础
+# 常规的J2SE的知识点
+* 执行gradle eclipse后导入eclipse中
+
