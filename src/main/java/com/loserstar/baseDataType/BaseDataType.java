@@ -7,8 +7,6 @@
  */
 package com.loserstar.baseDataType;
 
-import junit.framework.Test;
-
 /**
  * author: loserStar
  * date: 2018年1月10日下午1:29:02
@@ -120,6 +118,9 @@ public class BaseDataType {
 		int testBinaryNum2 = 1_2312_3131;
 		System.out.println(testBinaryNum1);
 		System.out.println(testBinaryNum2);
+		
+		
 	}
+
 
 }
