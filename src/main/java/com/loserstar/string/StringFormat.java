@@ -1,4 +1,4 @@
-package com.loserstar.String;
+package com.loserstar.string;
 
 public class StringFormat {
 /*
