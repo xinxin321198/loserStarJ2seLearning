@@ -20,7 +20,7 @@ public class CallBackMain{
 		CallBack callBack = new CallBack(string);//实现回调接口,此类提供构造方法可以传值进去
 		test.Test(callBack);//该方法会调用回调接口中的call和setValue方法
 		System.out.println(callBack.getValue());//验证方法是否调用
-		
+		new Thread();
 		
 		final String _string = string;
 		//直接new匿名类实现回调
