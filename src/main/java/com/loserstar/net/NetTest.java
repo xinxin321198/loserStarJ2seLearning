@@ -63,6 +63,9 @@ public class NetTest {
 			String string = new String(LoserStarFileUtil.ReadByteByInputStream(inputStream),Charset.forName("gb2312"));
 			System.out.println(string);
 			System.out.println("-----------run end------------------------");
+			
+			double d = 10.38;
+			System.out.println(Double.valueOf(d).byteValue());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
