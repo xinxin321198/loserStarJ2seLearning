@@ -3,6 +3,7 @@ package com.loserstar.reflect;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * 反射
@@ -56,8 +57,11 @@ public class ReflectTest {
 			this.passWord = passWord;
 		}
 	
-		public void Hello() {
+		public void hello() {
 			System.out.println("这是ReflectTest的Hello()公共方法-调用");
+		}
+		private void helloPrivate() {
+			System.out.println("这是ReflectTest的helloPrivate()私有方法-调用");
 		}
 	public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchFieldException {
 		//1.反射获取Class对象
@@ -146,5 +150,16 @@ public class ReflectTest {
         f.setAccessible(true);//暴力反射，解除私有限定  
         f.set(obj, "18888889999");  
         System.out.println("验证id：" + stu.id);  
+        
+        ReflectTest instanceReflectTest = (ReflectTest) stuClass3.newInstance();
+        System.out.println("**************获取共有方法****并调用********************************");  
+        Method hello = stuClass3.getDeclaredMethod("hello");
+        hello.setAccessible(true);
+        hello.invoke(instanceReflectTest, args);
+        
+        System.out.println("**************获取私有方法****并调用********************************");  
+        Method helloPrivate = stuClass3.getDeclaredMethod("helloPrivate");
+        helloPrivate.setAccessible(true);
+        helloPrivate.invoke(instanceReflectTest, args);
 	}
 }
